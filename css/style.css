@@ -1,7 +1,7 @@
+/*box shadow*/
 .header {
   background-color: white;
   padding: 0.8rem;
-  box-shadow: 10px 1px 1px gray;
   position: relative;
 }
 .header__logo {
@@ -65,7 +65,7 @@ h1, h5, .rob {
   text-align: center;
   padding: 1.3rem;
   font-weight: 500;
-  box-shadow: 16px 0 0 #EAEAEA;
+  box-shadow: inset 0px 5px 3px -1px rgba(0, 0, 0, 0.1);
 }
 .location__icon {
   padding: 0.5rem;
@@ -81,7 +81,7 @@ h1, h5, .rob {
   margin-bottom: 2rem;
 }
 .information__title {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 .information__text {
   padding: 1rem 0 0;
@@ -113,7 +113,7 @@ h1, h5, .rob {
   font-size: 1.3rem;
 }
 .tutorial__list {
-  padding: 1rem;
+  padding: 1.4rem;
 }
 .tutorial__step {
   background-color: #F6F6F6;
