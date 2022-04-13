@@ -17,3 +17,38 @@
 	}
 }
 
+/*media query*/
+
+
+@mixin desktoptutorial {
+	@media screen and (min-width: 1024px) {
+		width: 30%;
+		margin: 1.5rem auto;
+		flex-direction: row;
+	}
+}
+
+@mixin desktopTitle {
+	@media screen and (min-width: 1024px) {
+		text-align: center;
+	}
+}
+
+@mixin desktoplist {
+	@media screen and (min-width: 1024px){
+		display: flex;	
+	}
+	
+}
+
+@mixin desktoprestaurant {
+	@media screen and (min-width: 1024px){
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		gap: 3rem;
+		margin: 2rem;
+		width: 85%;
+		margin: auto;
+	}
+}

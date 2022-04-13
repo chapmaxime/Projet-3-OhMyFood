@@ -60,6 +60,7 @@ h1, h5, .rob {
   font-family: Shrikhand, Arial, Helvetica;
 }
 
+/*media query*/
 /* Photo */
 .image {
   width: 100%;
@@ -100,6 +101,7 @@ h1, h5, .rob {
   background: -webkit-linear-gradient(to right, #9356dc 21%, #ff79da 100%);
   background: linear-gradient(to right, #9356dc 21%, #ff79da 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   transition: 500ms ease-out;
 }

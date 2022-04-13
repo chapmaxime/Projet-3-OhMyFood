@@ -48,9 +48,12 @@
 	&__title {
 		margin-left: 1rem;
 		font-size: 1.3rem;
+		@include desktopTitle;
 	}
 	&__list {
 		padding: 1.4rem;
+		@include desktoplist;
+
 	}
 	&__step {
 		background-color: $soft-gray;
@@ -60,6 +63,7 @@
 		box-shadow: $box-shadow;
 		position: relative;
 		display: flex;
+		@include desktoptutorial;
 		cursor: pointer;
 		&:hover {
 			background-color: $primary-soft;
@@ -68,6 +72,7 @@
 			color: $color-primary;
 		}
 	}
+
 	&__counter {
 		position: absolute;
 		left: -10px;
@@ -97,12 +102,15 @@
 .restaurant {
 	background-color: $soft-gray;
 	padding: 2.5rem 1rem;
-	&__test {
 
+	&__test {
+		@include desktoprestaurant;
 	}
+
 	&__title {
 		margin-bottom: 1.2rem;
 		font-size: 1.3rem;
+		@include desktopTitle;
 	}
 	&__card {
 		position: relative;
@@ -143,10 +151,6 @@
 		color: black;
 	}
 
-	&__anim {
-
-	}
-
 	&__icon {
 		font-size: 1.7rem;
 		color: black;
@@ -158,6 +162,7 @@
 		background: -webkit-linear-gradient(to right, #9356dc 21%, #ff79da 100%);
 		background: linear-gradient(to right, #9356dc 21%, #ff79da 100%);
 		-webkit-background-clip: text;
+				background-clip: text;
 		color: transparent;
 		transition: 500ms ease-out;
 	}

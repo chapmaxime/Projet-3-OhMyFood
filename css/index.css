@@ -59,6 +59,7 @@ h1, h5, .rob {
   font-family: Shrikhand, Arial, Helvetica;
 }
 
+/*media query*/
 /* Localisation */
 .location {
   background-color: #EAEAEA;
@@ -112,8 +113,18 @@ h1, h5, .rob {
   margin-left: 1rem;
   font-size: 1.3rem;
 }
+@media screen and (min-width: 1024px) {
+  .tutorial__title {
+    text-align: center;
+  }
+}
 .tutorial__list {
   padding: 1.4rem;
+}
+@media screen and (min-width: 1024px) {
+  .tutorial__list {
+    display: flex;
+  }
 }
 .tutorial__step {
   background-color: #F6F6F6;
@@ -124,6 +135,13 @@ h1, h5, .rob {
   position: relative;
   display: flex;
   cursor: pointer;
+}
+@media screen and (min-width: 1024px) {
+  .tutorial__step {
+    width: 30%;
+    margin: 1.5rem auto;
+    flex-direction: row;
+  }
 }
 .tutorial__step:hover {
   background-color: #F5EDFF;
@@ -159,9 +177,25 @@ h1, h5, .rob {
   background-color: #F6F6F6;
   padding: 2.5rem 1rem;
 }
+@media screen and (min-width: 1024px) {
+  .restaurant__test {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 3rem;
+    margin: 2rem;
+    width: 85%;
+    margin: auto;
+  }
+}
 .restaurant__title {
   margin-bottom: 1.2rem;
   font-size: 1.3rem;
+}
+@media screen and (min-width: 1024px) {
+  .restaurant__title {
+    text-align: center;
+  }
 }
 .restaurant__card {
   position: relative;
@@ -211,6 +245,7 @@ h1, h5, .rob {
   background: -webkit-linear-gradient(to right, #9356dc 21%, #ff79da 100%);
   background: linear-gradient(to right, #9356dc 21%, #ff79da 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   transition: 500ms ease-out;
 }
