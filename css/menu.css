@@ -92,10 +92,16 @@ h1, h5, .rob {
 }
 .menu__icon {
   font-size: 1.3rem;
+  color: black;
 }
-.menu__icon:hover {
-  font-size: 1.3rem;
-  opacity: 0;
+.menu .fa-heart:hover::before {
+  background: #ff79da;
+  font-weight: 900;
+  background: -webkit-linear-gradient(to right, #9356dc 21%, #ff79da 100%);
+  background: linear-gradient(to right, #9356dc 21%, #ff79da 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: 500ms ease-out;
 }
 
 .container__meal {

@@ -39,10 +39,17 @@
 	}
 	&__icon {
 		font-size: 1.3rem;
-		&:hover {
-			font-size: 1.3rem;
-			opacity: 0;
-		}
+		color: black;
+	}
+
+	.fa-heart:hover::before {
+		background: #ff79da;
+		font-weight: 900;
+		background: -webkit-linear-gradient(to right, #9356dc 21%, #ff79da 100%);
+		background: linear-gradient(to right, #9356dc 21%, #ff79da 100%);
+		-webkit-background-clip: text;
+		color: transparent;
+		transition: 500ms ease-out;
 	}
 }
 
