@@ -15,10 +15,24 @@
   color: black;
 }
 
+/*media query*/
 .footer {
   background: #353535;
   padding: 1rem;
   color: white;
+}
+@media screen and (min-width: 1024px) {
+  .footer__logo {
+    width: 95%;
+    margin: 1rem auto;
+  }
+  .footer__contact {
+    width: 95%;
+    margin: 2rem auto;
+    display: flex;
+    column-gap: 5rem;
+    justify-content: center;
+  }
 }
 .footer__logo {
   font-size: 1.2rem;
@@ -61,6 +75,59 @@ h1, h5, .rob {
 }
 
 /*media query*/
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes rotateIn {
+  0% {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotate3d(0, 0, 1, -360deg);
+    transform: rotate3d(0, 0, 1, -360deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+@keyframes slideInRight {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes scale-up-hor-right {
+  0% {
+    -webkit-transform: scaleX(0.4);
+    transform: scaleX(0.4);
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+  }
+}
 /* Photo */
 .image {
   width: 100%;
@@ -106,6 +173,14 @@ h1, h5, .rob {
   transition: 500ms ease-out;
 }
 
+@media screen and (min-width: 1024px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 0 2.5rem;
+  }
+}
 .container__meal {
   margin-top: 2rem;
 }
@@ -124,6 +199,8 @@ h1, h5, .rob {
   border-radius: 1rem;
   display: flex;
   justify-content: space-between;
+  animation: fadeInUp 1.5s 1 both ease;
+  /* animation slide */
 }
 .meal__choise {
   flex: 1;
@@ -152,6 +229,23 @@ h1, h5, .rob {
   justify-content: flex-end;
   font-weight: 900;
 }
+.meal:hover .meal__price {
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
+  -webkit-animation-duration: 0.6s;
+  animation-duration: 0.6s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  display: flex;
+}
+.meal:hover .meal__confirm {
+  animation-name: scale-up-hor-right;
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  display: flex;
+}
 .meal__confirm {
   display: flex;
   justify-content: center;
@@ -161,6 +255,30 @@ h1, h5, .rob {
   width: 4rem;
   border-radius: 0 1rem 1rem 0rem;
   display: none;
+}
+.meal__anim {
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  background-color: white;
+  border-radius: 100px;
+  height: 1.5rem;
+  width: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(0deg);
+}
+.meal:hover .meal__check {
+  -webkit-animation-name: rotateIn;
+  animation-name: rotateIn;
+  -webkit-animation-duration: 0.6s;
+  animation-duration: 0.6s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
 /* Bouton commander */
@@ -185,6 +303,47 @@ h1, h5, .rob {
 .btn__order:hover {
   opacity: 0.85;
   box-shadow: 3px 10px 5px #c5c5c5;
+}
+
+/* fonction pour calculer le temps de retard de l'animation pour chaque cartes */
+.anim-1 {
+  animation-delay: 0.1s;
+}
+
+.anim-2 {
+  animation-delay: 0.2s;
+}
+
+.anim-3 {
+  animation-delay: 0.3s;
+}
+
+.anim-4 {
+  animation-delay: 0.4s;
+}
+
+.anim-5 {
+  animation-delay: 0.5s;
+}
+
+.anim-6 {
+  animation-delay: 0.6s;
+}
+
+.anim-7 {
+  animation-delay: 0.7s;
+}
+
+.anim-8 {
+  animation-delay: 0.8s;
+}
+
+.anim-9 {
+  animation-delay: 0.9s;
+}
+
+.anim-10 {
+  animation-delay: 1s;
 }
 
 /*# sourceMappingURL=menu.css.map */

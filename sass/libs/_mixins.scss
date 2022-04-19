@@ -52,3 +52,30 @@
 		margin: auto;
 	}
 }
+
+@mixin desktopMenu {
+	@media screen and (min-width: 1024px) {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1rem;
+		margin: 0 2.5rem;
+	}
+}
+
+@mixin desktopFooter {
+	@media screen and (min-width: 1024px) {
+		&__logo {
+		width: 95%;
+		margin: 1rem auto;
+	}
+	&__contact  {
+		width: 95%;
+		margin: 2rem auto;
+		display: flex;
+		column-gap: 5rem;
+		justify-content: center;
+		
+	  }
+	}
+
+}

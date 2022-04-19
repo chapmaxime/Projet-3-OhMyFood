@@ -1,7 +1,10 @@
+@import "./libs/mixins";
+
 .footer {
     background: $footer-color;
     padding: 1rem;
     color: $white;
+    @include desktopFooter;
     &__logo {
         font-size: 1.2rem;
         padding-left: 1rem;

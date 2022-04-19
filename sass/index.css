@@ -14,24 +14,10 @@
   color: black;
 }
 
-/*media query*/
 .footer {
   background: #353535;
   padding: 1rem;
   color: white;
-}
-@media screen and (min-width: 1024px) {
-  .footer__logo {
-    width: 95%;
-    margin: 1rem auto;
-  }
-  .footer__contact {
-    width: 95%;
-    margin: 2rem auto;
-    display: flex;
-    column-gap: 5rem;
-    justify-content: center;
-  }
 }
 .footer__logo {
   font-size: 1.2rem;
@@ -220,7 +206,8 @@ h1, h5, .rob {
   box-shadow: 3px 10px 5px #EAEAEA;
 }
 .restaurant__img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
   height: 11rem;
   border-radius: 1rem 1rem 0 0;
@@ -256,7 +243,6 @@ h1, h5, .rob {
 .restaurant .fa-heart:hover::before {
   background: #ff79da;
   font-weight: 900;
-  background: -webkit-linear-gradient(to right, #9356dc 21%, #ff79da 100%);
   background: linear-gradient(to right, #9356dc 21%, #ff79da 100%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -274,9 +260,12 @@ h1, h5, .rob {
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.5019607843);
   z-index: 10000;
-  animation: loadinger 0.1s;
-  animation-delay: 2.9s;
-  animation-fill-mode: both;
+  -webkit-animation: loadinger 0.1s;
+          animation: loadinger 0.1s;
+  -webkit-animation-delay: 2.9s;
+          animation-delay: 2.9s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
 .loading {
@@ -287,8 +276,19 @@ h1, h5, .rob {
   border-radius: 50%;
   width: 70px;
   height: 70px;
-  animation: loading 1s ease-in-out;
-  animation-iteration-count: 3;
+  -webkit-animation: loading 1s ease-in-out;
+          animation: loading 1s ease-in-out;
+  -webkit-animation-iteration-count: 3;
+          animation-iteration-count: 3;
+}
+
+@-webkit-keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes loading {
@@ -299,11 +299,15 @@ h1, h5, .rob {
     transform: rotate(360deg);
   }
 }
-@keyframes loadinger {
+@-webkit-keyframes loadinger {
   100% {
     opacity: 0;
     z-index: -1;
   }
 }
-
-/*# sourceMappingURL=index.css.map */
+@keyframes loadinger {
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}/*# sourceMappingURL=index.css.map */

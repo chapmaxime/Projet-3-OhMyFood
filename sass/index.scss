@@ -190,8 +190,10 @@
 
 .loading
 {
-    border: 5px solid $color-primary;
-    border-top: 5px solid $color-tertiary;
+    border: 8px solid $color-tertiary;
+    border-top: 8px solid $color-tertiary;
+	border-right: 8px solid $color-primary;
+	border-left: 8px solid $color-primary;
     border-radius: 50%;
     width: 70px;
     height: 70px;
