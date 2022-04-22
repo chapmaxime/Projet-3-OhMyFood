@@ -36,7 +36,9 @@
 
 @mixin desktoplist {
 	@media screen and (min-width: 1024px){
-		display: flex;	
+		display: flex;
+		width: 88%;
+		margin: auto;
 	}
 	
 }

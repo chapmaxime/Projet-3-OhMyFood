@@ -138,6 +138,8 @@ h1, h5, .rob {
 @media screen and (min-width: 1024px) {
   .tutorial__list {
     display: flex;
+    width: 88%;
+    margin: auto;
   }
 }
 .tutorial__step {
