@@ -180,10 +180,43 @@
 }
 
 
-/* fonction pour calculer le temps de retard de l'animation pour chaque cartes */
 
-@for $i from 1 to 11 {
-	.anim-#{$i} {
-		animation-delay:(($i - 1) * 2 / 10) + s;
-	}
+/* temps de retard de l'animation pour chaque cartes */
+
+
+.meal.anim-1 {
+	-webkit-animation-delay: 0.1s;
+	animation-delay: 0.1s;
+}
+.meal.anim-2 {
+	-webkit-animation-delay: 0.2s;
+	animation-delay: 0.2s;
+}
+.meal.anim-3 {
+	-webkit-animation-delay: 0.3s;
+	animation-delay: 0.3s;
+}
+.meal.anim-4 {
+	-webkit-animation-delay: 0.4s;
+	animation-delay: 0.4s;
+}
+.meal.anim-5 {
+	-webkit-animation-delay: 0.5s;
+	animation-delay: 0.5s;
+}
+.meal.anim-6 {
+	-webkit-animation-delay: 0.6s;
+	animation-delay: 0.6s;
+}
+.meal.anim-7 {
+	-webkit-animation-delay: 0.7s;
+	animation-delay: 0.7s;
+}
+.meal.anim-8 {
+	-webkit-animation-delay: 0.8s;
+	animation-delay: 0.8s;
+}
+.meal.anim-9 {
+	-webkit-animation-delay: 0.9s;
+	animation-delay: 0.9s;
 }
